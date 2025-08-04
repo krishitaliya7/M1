@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Account - QuantumBank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        header {
+            background-color: #8B5BF5;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+        button {
+            background-color: white;
+            color: #8B5BF5;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 1rem;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .feature img {
+            width: 120px;
+            height: auto;
+        }
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #8B5BF5;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Open Your QuantumBank Account</h1>
+        <h2>Ready to experience next-generation banking?</h2>
+        <button>Open Account</button>
+        <button>Watch Demo</button>
+    </header>
+    <div class="container">
+        <h2>Why Choose QuantumBank?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="security-icon.png" alt="Security"/>
+                <p>Military-grade Security</p>
+            </div>
+            <div class="feature">
+                <img src="speed-icon.png" alt="Speed"/>
+                <p>Lightning-Fast Transactions</p>
+            </div>
+            <div class="feature">
+                <img src="smart-wallet-icon.png" alt="Smart Wallet"/>
+                <p>Smart Financial Management</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <h2>Account Opening Form</h2>
+            <form id="accountForm" onsubmit="handleSubmit(event)">
+                <input type="text" name="fullName" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <select name="accountType" required>
+                    <option value="">Select Account Type</option>
+                    <option value="savings">Savings Account</option>
+                    <option value="checking">Checking Account</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 QuantumBank. All rights reserved.</p>
+    </footer>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Account opened successfully!");
+            document.getElementById("accountForm").reset();
+        }
+    </script>
+</body>
+</html>
